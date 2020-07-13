@@ -20,9 +20,10 @@ def outer():
     y = 120
 
     def inner():
+        nonlocal y #To Learn How to Access Inside
         y = 999
-        print(y)
-        
+        """ print(y) """ #Wrong Way
+
     inner()
 
     # This prints 120. What do we have to change in inner() to get it to print
@@ -32,3 +33,6 @@ def outer():
 
 
 outer()
+
+
+
